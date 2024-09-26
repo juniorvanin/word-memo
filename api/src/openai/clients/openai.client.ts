@@ -24,7 +24,6 @@ export class OpenAIClient {
 
     const firstChoice = GeneratePromptSchema.parse(response.data).choices[0];
 
-    console.log('firstChoice', firstChoice);
     if (!firstChoice) throw new Error('OpenAI returned no content.');
 
     return firstChoice.message.content;

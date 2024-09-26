@@ -6,9 +6,10 @@ import { UserWordsService } from './services/user-words.service';
 
 import { UserWord } from './entities/user-word.entity';
 import { WordsModule } from '../words/words.module';
+import { User } from './entities/user.entity';
 
 @Module({
-  imports: [WordsModule, TypeOrmModule.forFeature([UserWord])],
+  imports: [WordsModule, TypeOrmModule.forFeature([UserWord, User])],
   controllers: [UserWordsController],
   providers: [UserWordsService],
 })

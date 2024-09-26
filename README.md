@@ -17,9 +17,9 @@ The frontend App was created using create-react-app and you can run the client b
 
 ### `npm run start`
 
-## Additional Scripts in the FE
+## Additional commands in the FE
 
-In the project directory, you can run:
+In the client folder, you can run:
 
 ### `npm test`
 
@@ -28,6 +28,23 @@ Run the unit tests.
 ### `npm run storybook`
 
 Run the storybooks and manually check the visual consistency of the components.
+
+### `npm run format`
+
+Format the code using prettier
+
+
+## Additional commands in the BE
+
+In the api folder, you can run:
+
+### `npm test`
+
+Run the unit and integration tests. In order to run e2e tests, you need to run the database using the command `docker-compose up db`.
+
+### `npm run migration:generate`
+
+Use this command to create new migrations based on your database entities.
 
 ### `npm run format`
 

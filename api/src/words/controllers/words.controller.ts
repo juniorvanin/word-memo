@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpCode,
   Param,
   Post,
   Query,
@@ -32,6 +33,7 @@ export class WordsController {
   }
 
   @Post('/check')
+  @HttpCode(200)
   async checkWord(
     @Body() { article, word }: { article: string; word: string },
   ): Promise<WordCheckResponseDto> {
