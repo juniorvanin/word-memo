@@ -1,0 +1,1 @@
+export { SyllablesSeparatedByDots } from "./SyllablesSeparatedByDots";
