@@ -19,6 +19,7 @@ export const Table = ({
   handleDelete,
   handleToggleSaved,
 }: Props) => {
+  const [rows, setRows] = useState(words);
   const [openSnackbar, setOpenSnackBar] = useState(false);
 
   const columns: GridColDef[] = [
@@ -128,6 +129,9 @@ export const Table = ({
         <IconButton
           onClick={() => {
             handleDelete(params.id.toString());
+            setRows((prevRows) =>
+              prevRows.filter((row) => row.id !== params.id.toString()),
+            );
           }}
         >
           <DeleteIcon color="error" />
@@ -139,7 +143,7 @@ export const Table = ({
   return (
     <>
       <DataGrid
-        rows={words}
+        rows={rows}
         columns={columns}
         initialState={{
           pagination: {

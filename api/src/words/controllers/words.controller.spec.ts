@@ -12,7 +12,7 @@ describe('WordsController (e2e)', () => {
 
   beforeAll(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [AppModule], // Inject AppModule here
+      imports: [AppModule],
     }).compile();
 
     app = moduleFixture.createNestApplication();

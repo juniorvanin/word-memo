@@ -1,0 +1,1 @@
+export { NewWordModal } from "./NewWordModal";

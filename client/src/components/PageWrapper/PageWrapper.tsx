@@ -76,9 +76,8 @@ export const PageWrapper = (props: React.PropsWithChildren<Props>) => {
           </Box>
         </Box>
       </Container>
-
       <Box sx={{ backgroundColor: "black", height: 5 }}></Box>
-      <Container sx={{ mt: 5 }}>
+      <Container sx={{ mt: 5, mb: 20 }}>
         <Typography variant="h5" sx={{ mb: 2 }}>
           {props.pageTitle}
         </Typography>

@@ -22,3 +22,16 @@ export const deleteWord = async (wordId: string) => {
 
   await mutate(`${API_URL}/words`);
 };
+
+export const createRandomWord = async (): Promise<Word> => {
+  const url = `${API_URL}/words/random`;
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error("Failed to delete word");
+  }
+
+  await mutate(`${API_URL}/words`);
+
+  return response.json() as Promise<Word>;
+};
